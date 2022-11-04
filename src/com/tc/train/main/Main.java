@@ -41,19 +41,18 @@ public class Main {
 		depo.addTrains(b07);
 		
 		DepoView view = new DepoView();
-		//view.print(depo);
-		//System.out.println();
-		view.printKrasivoe(depo);
-		System.out.println();
 		DepoLogic logic = new DepoLogic();
-		//logic.sortByNumber(depo);
-		logic.sortByDepartureAndTime(depo); 
-		//System.out.println(logic.find(11, depo)); // выводит список поездов с совпавшим номером (но не красиво ))
-		//view.printKrasivoe(logic.find(65, depo)); // если номер не совпал - выводит сообщение, что нет таких поездов
+		
+		view.print(depo);
+			System.out.println();
 		view.printKrasivoe(depo);
-		//int i = 0;
-		//System.out.println();
-		//System.out.println(depo.getTrains().get(i+1).getDepatureTime().compareTo( depo.getTrains().get(i).getDepatureTime() ));
+			System.out.println();
+		logic.sortByNumber(depo);
+		logic.sortByDepartureAndTime(depo); 
+		System.out.println(logic.find(11, depo)); // выводит список поездов с совпавшим номером (но не красиво ))
+		view.printKrasivoe(logic.find(65, depo)); // если номер не совпал - выводит сообщение, что нет таких поездов
+		view.printKrasivoe(depo);
+		
 		
 	}
 
